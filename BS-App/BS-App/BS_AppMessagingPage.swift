@@ -1,12 +1,13 @@
 //
-//  BS_AppMapPage.swift
+//  BS_AppMessagingPage.swift
 //  BS-App
 //
 //  Created by Tom Knight on 22/03/2025.
 //
+
 import SwiftUI
 
-struct BS_AppMapPage: View {
+struct BS_AppMessagingPage: View {
     var body: some View {
         NavigationView {
             VStack {
@@ -34,17 +35,17 @@ struct BS_AppMapPage: View {
                     
                     // Bottom buttons with separators
                     HStack(spacing: 4) {
-                        MapPageBottomButton(imageName: "MainPageIconDeactivated")
+                        MessagingPageBottomButton(imageName: "MainPageIconDeactivated")
                         Divider()
-                        MapPageBottomButton(imageName: "MapPageIconActivated")
-                        Divider()
-                            .frame(width: 15)
-                        MapPageBottomButton(imageName: "CameraPageIconDeactivated")
+                        MessagingPageBottomButton(imageName: "MapPageIconDeactivated")
                         Divider()
                             .frame(width: 15)
-                        MapPageBottomButton(imageName: "MessagingPageIconDeactivated")
+                        MessagingPageBottomButton(imageName: "CameraPageIconDeactivated")
                         Divider()
-                        MapPageBottomButton(imageName: "SettingsPageIconDeactivated")
+                            .frame(width: 15)
+                        MessagingPageBottomButton(imageName: "MessagingPageIconActivated")
+                        Divider()
+                        MessagingPageBottomButton(imageName: "SettingsPageIconDeactivated")
                     }
                     .frame(height: 50)
                     .padding(.bottom, 20)
@@ -58,7 +59,7 @@ struct BS_AppMapPage: View {
     }
 }
 
-struct MapPageBottomButton: View {
+struct MessagingPageBottomButton: View {
     let imageName: String
     
     var body: some View {
@@ -74,8 +75,8 @@ struct MapPageBottomButton: View {
     }
 }
 
-struct BS_AppMapPage_Previews: PreviewProvider {
+struct BS_AppMessagingPage_Previews: PreviewProvider {
     static var previews: some View {
-        BS_AppMapPage()
+        BS_AppMessagingPage()
     }
 }
