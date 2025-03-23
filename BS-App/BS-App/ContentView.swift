@@ -8,25 +8,45 @@
 import SwiftUI
 import SwiftData
 
+
+import SwiftUI
+
 struct ContentView: View {
-    var body: some View{
-        NavigationView {
-            ZStack {
-                Color(red:54/255, green:54/255, blue:54/255)
-                    .edgesIgnoringSafeArea(.all)
-                VStack {
-                    HStack{
-                        Image("AppIconDarkMode")
-                            .resizable()
-                            .aspectRatio(contentMode: .fit)
-                            .frame(width: 300, height: 300)
-                            .padding(.bottom , 65)
-                    }
+    var body: some View {
+        TabView {
+            BS_AppMainPage()
+                .tabItem {
+                    
                 }
-            }
+            
+            BS_AppMapPage()
+                .tabItem {
+                    
+                }
+            
+            BS_AppCameraPage()
+                .tabItem {
+                    
+                }
+                .onAppear{
+                    
+                }
+                .offset(y:132)
+            BS_AppMessagingPage()
+                .tabItem {
+                    
+                }
+            BS_AppSettingsPage()
+                .tabItem{
+                    
+                }
+        }
+        .onAppear{
+            
         }
     }
 }
+
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()

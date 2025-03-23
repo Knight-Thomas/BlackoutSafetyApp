@@ -29,9 +29,22 @@
 		8D33DB732D89927900E209F1 /* BS-AppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "BS-AppUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		8D81232D2D8F43C600382B32 /* Exceptions for "BS-App" folder in "BS-App" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = 8D33DB562D89927800E209F1 /* BS-App */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		8D33DB592D89927800E209F1 /* BS-App */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				8D81232D2D8F43C600382B32 /* Exceptions for "BS-App" folder in "BS-App" target */,
+			);
 			path = "BS-App";
 			sourceTree = "<group>";
 		};
@@ -399,7 +412,10 @@
 				DEVELOPMENT_TEAM = BZKGJVZNNQ;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "BS-App/Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = Vigil;
+				INFOPLIST_KEY_LSApplicationCategoryType = "";
+				INFOPLIST_KEY_NSCameraUsageDescription = "This app requires access to take photos";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -429,7 +445,10 @@
 				DEVELOPMENT_TEAM = BZKGJVZNNQ;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "BS-App/Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = Vigil;
+				INFOPLIST_KEY_LSApplicationCategoryType = "";
+				INFOPLIST_KEY_NSCameraUsageDescription = "This app requires access to take photos";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
