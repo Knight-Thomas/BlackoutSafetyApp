@@ -30,6 +30,6 @@ struct BS_AppLoadingScreen: View {
 }
 struct BS_AppLoadingScreen_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        BS_AppLoadingScreen()
     }
 }

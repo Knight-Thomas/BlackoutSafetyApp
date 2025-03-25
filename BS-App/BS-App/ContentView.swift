@@ -5,44 +5,39 @@
 //  Created by Tom Knight on 18/03/2025.
 //
 
-import SwiftUI
-import SwiftData
-
 
 import SwiftUI
+
 
 struct ContentView: View {
+    @State private var isLoading = true
+
     var body: some View {
-        TabView {
-            BS_AppMainPage()
-                .tabItem {
-                    
+        if isLoading == true{
+            BS_AppLoadingScreen()
+                .onAppear {
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
+                        isLoading = false
+                    }
                 }
-            
-            BS_AppMapPage()
-                .tabItem {
-                    
-                }
-            
-            BS_AppCameraPage()
-                .tabItem {
-                    
-                }
-                .onAppear{
-                    
-                }
-                .offset(y:132)
-            BS_AppMessagingPage()
-                .tabItem {
-                    
-                }
-            BS_AppSettingsPage()
-                .tabItem{
-                    
-                }
-        }
-        .onAppear{
-            
+        } else {
+            TabView {
+                BS_AppMainPage()
+                    .tabItem { }
+                
+                BS_AppMapPage()
+                    .tabItem { }
+                
+                BS_AppCameraPage()
+                    .tabItem { }
+                    .offset(y: 132)
+                
+                BS_AppMessagingPage()
+                    .tabItem { }
+                
+                BS_AppSettingsPage()
+                    .tabItem { }
+            }
         }
     }
 }
